@@ -1,0 +1,138 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  gap: 1rem;
+  font-family: "Montserrat", sans-serif;
+  padding-block: 2rem;
+}
+
+main {
+  background-color: white;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  width: min(600px, 95%);
+  min-height: 400px;
+}
+
+.card__image {
+  flex: 1.25;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__content {
+  flex: 1;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.card__category {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+.card__name {
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  line-height: 106%;
+  margin-right: 1.25rem;
+}
+
+.card__description {
+  color: var(--dark-grayish-blue);
+  margin-right: 1rem;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__price--discounted {
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  color: var(--dark-cyan);
+  font-weight: bold;
+}
+
+.card__price--original {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.card__button {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 0.8rem;
+  border-radius: 6px;
+}
+.card__button:hover {
+  cursor: pointer;
+}
+
+.card__button--icon {
+  width: 15px;
+}
+
+.card__button--label {
+  font-weight: 600;
+}
+
+.attribution a {
+  color: var(--dark-cyan);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 581px) {
+  main {
+    flex-direction: column;
+  }
+
+  .card__content {
+    padding-inline: 1.25rem;
+  }
+}
